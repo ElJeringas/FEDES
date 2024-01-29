@@ -1,0 +1,26 @@
+/* Dashboard.css */
+.dashboard-container {
+    padding: 20px;
+  }
+  
+  .dashboard-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 16px;
+    
+  }
+  
+  .chart-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .dahsboard__content-chart, .dahsboard__content-lines {
+    width: 550px;
+  }
+
+  .dahsboard__content-table{
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    padding: 12px;
+  }

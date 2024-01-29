@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import React from 'react'
+import RootLayout from './layouts/RootLayout'
+import { Route,Routes } from 'react-router-dom'
+import './App.css'
+import BudgetedValues from './pages/BudgetedValues/BudgetedValues'
+import ExecutedValues from './pages/ExecutedValues/ExecutedValues'
+import Notifications from './pages/Notifications/Notifications'
+import Dashboard from './pages/Dashboard/Dashboard'
+import LogOut from './pages/LogOut/LogOut'
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <RootLayout>
+      <Routes>
+        <Route path='/' ></Route>
+        <Route path='/BudgetedValues' element={<BudgetedValues/>}></Route>
+        <Route path='/ExecutedValues' element={<ExecutedValues/>}></Route>
+        <Route path='/dashboard' element={<Dashboard/>}></Route>
+        <Route path='/notifications' element={<Notifications/>}></Route>
+        <Route path='/logout' element={<LogOut/>}></Route>
+      </Routes>
+    </RootLayout>
+  )
 }
 
-export default App;
+export default App
