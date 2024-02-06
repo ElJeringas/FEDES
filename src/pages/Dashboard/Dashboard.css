@@ -1,26 +1,30 @@
 /* Dashboard.css */
 .dashboard-container {
-    padding: 20px;
-  }
-  
-  .dashboard-title {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 16px;
-    
-  }
-  
-  .chart-container {
-    display: flex;
-    justify-content: space-between;
-  }
-  .dahsboard__content-chart, .dahsboard__content-lines {
-    width: 550px;
-  }
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 2rem 1rem;
+}
 
-  .dahsboard__content-table{
-    display: flex;
-    justify-content: center;
-    width: 50%;
-    padding: 12px;
-  }
+.dashboard-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.chart-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.dahsboard__content-chart,
+.dahsboard__content-lines {
+  flex: 1; /* Allow these components to grow and take remaining space */
+  max-width: 550px; /* Set a maximum width if needed */
+}
+
+.dahsboard__content-table {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  padding: 12px;
+}

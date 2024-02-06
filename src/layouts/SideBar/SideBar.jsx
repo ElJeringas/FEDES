@@ -11,9 +11,10 @@ import { IoIosArrowBack } from "react-icons/io";
 import { SlSettings } from "react-icons/sl";
 import { IoIosNotifications } from "react-icons/io";
 import { AiOutlineAppstore } from "react-icons/ai";
-import { FaChartBar } from "react-icons/fa";import { HiOutlineDatabase } from "react-icons/hi";
-import { TbReportAnalytics } from "react-icons/tb";
-import { RiBuilding3Line } from "react-icons/ri";
+import { FaChartBar } from "react-icons/fa";
+import { PiMicrosoftExcelLogoDuotone } from "react-icons/pi";
+import { MdHorizontalSplit } from 'react-icons/md';
+
 import { useMediaQuery } from "react-responsive";
 import { MdMenu } from "react-icons/md";
 import { NavLink, useLocation, useRoutes } from "react-router-dom";
@@ -56,12 +57,15 @@ const SideBar = () => {
     : {
         open: {
           width: "16rem",
+          position:"sticky",
           transition: {
             damping: 40,
           },
+          
         },
         closed: {
           width: "4rem",
+          position:"sticky",
           transition: {
             damping: 40,
           },
@@ -72,8 +76,9 @@ const SideBar = () => {
     {
       name: "Ejec. Presupuestaria",
       icon: VscDashboard,
-      menus: ["Valores Presupuestados", "Valores Ejecutados"],
-      route:["BudgetedValues", "ExecutedValues"],
+      menus: ["Valores Presupuestados", "Valores Ejecutados", "Dashboard"],
+      route:["BudgetedValues", "ExecutedValues", "Dashboard"],
+      iconList:[PiMicrosoftExcelLogoDuotone, PiMicrosoftExcelLogoDuotone, FaChartBar],
     },
 /*     {
       name: "analytics",
@@ -95,12 +100,13 @@ const SideBar = () => {
         variants={Nav_animation}
         initial={{ x: isTabletMid ? -250 : 0 }}
         animate={open ? "open" : "closed"}
-        className="bg-white text-gray shadow-xl z-[999] max-w-[16rem] w-[16rem] fixed top-0 bottom-0 left-0 h-screen overflow-hidden"
+        className="bg-white text-gray shadow-xl z-[999] max-w-[16rem] w-[16rem]
+        fixed top-0 bottom-0 left-0 h-screen overflow-hidden md:fixed"
 
       >
 <div className="flex items-center gap-2.5 font-medium border-b py-3 border-slate-300 mx-3">
   <img src={logo} width={45} alt="" />
-  <div className="flex flex-col">
+  <div className={`flex flex-col ${open ? "block" :"hidden"}`}>
     <span className="text-xl">Fedes</span>
   </div>
 </div>
@@ -108,7 +114,7 @@ const SideBar = () => {
 
 
         <div className="flex flex-col  h-full">
-          <ul className="whitespace-pre px-2.5 text-[0.9rem] py-5 flex flex-col gap-1  font-medium overflow-x-hidden scrollbar-thin scrollbar-track-white scrollbar-thumb-slate-100   md:h-[68%] h-[70%]">
+          <ul className="whitespace-pre px-2.5 text-[0.9rem] py-5 flex flex-col gap-1 font-medium overflow-x-hidden scrollbar-thin scrollbar-track-white scrollbar-thumb-slate-100   md:h-[68%] h-[70%]">
             <li>
               <NavLink to={"/"} className="link">
                 <AiOutlineAppstore size={23} className="min-w-max" />
@@ -116,17 +122,11 @@ const SideBar = () => {
               </NavLink>
             </li>
             <li>
-              <NavLink to={"/dashboard"} className="link">
-                <FaChartBar size={23} className="min-w-max" />
-                Dashboard
+              <NavLink to={"/Storage"} className="link">
+                <MdHorizontalSplit size={23} className="min-w-max" />
+                Storage
               </NavLink>
             </li>
-{/*             <li>
-              <NavLink to={"/stroage"} className="link">
-                <HiOutlineDatabase size={23} className="min-w-max" />
-                Stroage
-              </NavLink>
-            </li> */}
 
             {(
               <div className="border-y py-5 border-slate-300 ">
@@ -134,8 +134,8 @@ const SideBar = () => {
                   Categorias
                 </small>}
                 {subMenusList?.map((menu) => (
-                  <div key={menu.name} className="flex flex-col gap-1 " >
-                    <SubMenu data={menu} />
+                  <div key={menu.name} className="flex flex-col" >
+                    <SubMenu data={menu}/>
                   </div>
                 ))}
               </div>

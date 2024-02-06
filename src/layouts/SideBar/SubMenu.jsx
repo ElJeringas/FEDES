@@ -6,7 +6,11 @@ import { NavLink, useLocation } from "react-router-dom";
 const SubMenu = ({data}) => {
     const { pathname } = useLocation();
     const [subMenuOpen, setSubMenuOpen] = useState(false);
-    console.log(data.menus) 
+    const renderIcon = (iconComponent, size) => {
+      const Icon = iconComponent;
+      return <Icon size={size} className="min-w-max" />;
+    };
+  
   return (
     <>
       <li
@@ -29,7 +33,8 @@ const SubMenu = ({data}) => {
                 height: 0,
               }
         }
-        className="flex h-0 flex-col pl-14 text-[0.8rem] font-normal overflow-hidden"
+        //className={`flex h-0 flex-col pl-4 text-[0.8rem] font-normal overflow-hidden ${subMenuOpen ? "flex h-0 flex-col pl-0 text-[0.8rem] font-normal overflow-hidden" : "hidden"}`}
+        className="flex h-0 flex-col pl-0 text-[0.8rem] font-normal overflow-hidden"
       >
         {data.route?.map((route,index) => (
           <li key={route} >
@@ -37,6 +42,7 @@ const SubMenu = ({data}) => {
               to={`/${route}`}
               className="link !bg-transparent capitalize"
             >
+              {renderIcon(data.iconList[index], 23)}
               {data.menus[index]}
             </NavLink>
           </li>

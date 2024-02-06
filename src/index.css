@@ -29,6 +29,7 @@
   --color-black: #0C0C0C;
   --color-gray: #545454;
   --color-white: #FFFFFF;
+  --max-width: 1200px;
 }
 
 * {
