@@ -21,7 +21,7 @@ const Lines = () => {
         tickSize: 5,
         tickPadding: 5,
         tickRotation: 0,
-        legend: 'transportation',
+        legend: 'Meses',
         legendOffset: 36,
         legendPosition: 'middle'
     }}
@@ -29,7 +29,7 @@ const Lines = () => {
         tickSize: 5,
         tickPadding: 5,
         tickRotation: 0,
-        legend: 'count',
+        legend: 'Presupuesto',
         legendOffset: -40,
         legendPosition: 'middle'
     }}
@@ -41,7 +41,7 @@ const Lines = () => {
     useMesh={true}
     legends={[
         {
-            anchor: 'bottom-right',
+            anchor: 'right',
             direction: 'column',
             justify: false,
             translateX: 100,

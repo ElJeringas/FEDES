@@ -108,276 +108,61 @@ const charData = [
   ];
 
 const lineData = [
-    {
-      "id": "japan",
-      "color": "hsl(261, 70%, 50%)",
-      "data": [
-        {
-          "x": "plane",
-          "y": 137
-        },
-        {
-          "x": "helicopter",
-          "y": 258
-        },
-        {
-          "x": "boat",
-          "y": 84
-        },
-        {
-          "x": "train",
-          "y": 299
-        },
-        {
-          "x": "subway",
-          "y": 2
-        },
-        {
-          "x": "bus",
-          "y": 37
-        },
-        {
-          "x": "car",
-          "y": 277
-        },
-        {
-          "x": "moto",
-          "y": 134
-        },
-        {
-          "x": "bicycle",
-          "y": 164
-        },
-        {
-          "x": "horse",
-          "y": 69
-        },
-        {
-          "x": "skateboard",
-          "y": 113
-        },
-        {
-          "x": "others",
-          "y": 40
-        }
-      ]
-    },
-    {
-      "id": "france",
-      "color": "hsl(172, 70%, 50%)",
-      "data": [
-        {
-          "x": "plane",
-          "y": 148
-        },
-        {
-          "x": "helicopter",
-          "y": 289
-        },
-        {
-          "x": "boat",
-          "y": 57
-        },
-        {
-          "x": "train",
-          "y": 39
-        },
-        {
-          "x": "subway",
-          "y": 134
-        },
-        {
-          "x": "bus",
-          "y": 47
-        },
-        {
-          "x": "car",
-          "y": 218
-        },
-        {
-          "x": "moto",
-          "y": 228
-        },
-        {
-          "x": "bicycle",
-          "y": 244
-        },
-        {
-          "x": "horse",
-          "y": 44
-        },
-        {
-          "x": "skateboard",
-          "y": 235
-        },
-        {
-          "x": "others",
-          "y": 230
-        }
-      ]
-    },
-    {
-      "id": "us",
-      "color": "hsl(192, 70%, 50%)",
-      "data": [
-        {
-          "x": "plane",
-          "y": 205
-        },
-        {
-          "x": "helicopter",
-          "y": 240
-        },
-        {
-          "x": "boat",
-          "y": 142
-        },
-        {
-          "x": "train",
-          "y": 169
-        },
-        {
-          "x": "subway",
-          "y": 114
-        },
-        {
-          "x": "bus",
-          "y": 16
-        },
-        {
-          "x": "car",
-          "y": 207
-        },
-        {
-          "x": "moto",
-          "y": 247
-        },
-        {
-          "x": "bicycle",
-          "y": 235
-        },
-        {
-          "x": "horse",
-          "y": 185
-        },
-        {
-          "x": "skateboard",
-          "y": 255
-        },
-        {
-          "x": "others",
-          "y": 161
-        }
-      ]
-    },
+
     {
       "id": "germany",
       "color": "hsl(254, 70%, 50%)",
       "data": [
         {
-          "x": "plane",
+          "x": "Enero",
           "y": 190
         },
         {
-          "x": "helicopter",
+          "x": "Febrero",
           "y": 123
         },
         {
-          "x": "boat",
+          "x": "Marzo",
           "y": 113
         },
         {
-          "x": "train",
+          "x": "Abril",
           "y": 193
         },
         {
-          "x": "subway",
+          "x": "Mayo",
           "y": 298
         },
         {
-          "x": "bus",
+          "x": "Junio",
           "y": 55
         },
         {
-          "x": "car",
+          "x": "Julio",
           "y": 222
         },
         {
-          "x": "moto",
+          "x": "Agosto",
           "y": 50
         },
         {
-          "x": "bicycle",
+          "x": "Septiembre",
           "y": 290
         },
         {
-          "x": "horse",
+          "x": "Octubre",
           "y": 81
         },
         {
-          "x": "skateboard",
+          "x": "Noviembre",
           "y": 261
         },
         {
-          "x": "others",
+          "x": "Diciembre",
           "y": 27
         }
       ]
     },
-    {
-      "id": "norway",
-      "color": "hsl(331, 70%, 50%)",
-      "data": [
-        {
-          "x": "plane",
-          "y": 237
-        },
-        {
-          "x": "helicopter",
-          "y": 73
-        },
-        {
-          "x": "boat",
-          "y": 110
-        },
-        {
-          "x": "train",
-          "y": 29
-        },
-        {
-          "x": "subway",
-          "y": 107
-        },
-        {
-          "x": "bus",
-          "y": 242
-        },
-        {
-          "x": "car",
-          "y": 273
-        },
-        {
-          "x": "moto",
-          "y": 230
-        },
-        {
-          "x": "bicycle",
-          "y": 58
-        },
-        {
-          "x": "horse",
-          "y": 26
-        },
-        {
-          "x": "skateboard",
-          "y": 146
-        },
-        {
-          "x": "others",
-          "y": 168
-        }
-      ]
-    }
   ];
 
 export {charData, lineData}
